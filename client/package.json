@@ -1,5 +1,6 @@
 {
   "name": "starter-kit",
+  "homepage": "http://elesarr.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +8,7 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "@truffle/hdwallet-provider": "^1.0.31",
+    "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",

@@ -1,14 +1,24 @@
-
 import React, { Component } from 'react';
 import moment from "moment";
 
+import axios from 'axios';
+
+
+
 export default class Countdown extends Component {
+	constructor(props) {
+		super(props);
+			this.handleSubmit = this.handleSubmit.bind(this);
+	}
+	
 	state = {
 		days: undefined,
         hours: undefined,
         minutes: undefined,
-        seconds: undefined
+		seconds: undefined,
+		message:''
 	}
+
 	componentDidMount() {
         this.interval = setInterval(() => {
             const { timeTillDate, timeFormat } = this.props;
@@ -30,6 +40,22 @@ export default class Countdown extends Component {
         }
     }
 
+	 handleSubmit(event){
+		event.preventDefault();
+		 const email = this.email.value
+		 
+		//  console.log(email)
+		// console.log("HELLO WORLD")
+		axios.post(`https://eles-api.herokuapp.com/api/users`, {email})
+			.then((res, err) =>{
+				if(err){
+					console.log(err)
+				}
+				console.log(res.message)
+			} )
+			.catch(err => console.log(err))
+			event.stopPropagation();
+	}
 	render() {
 		const { days, hours, minutes, seconds } = this.state;
 		return (
@@ -46,7 +72,7 @@ export default class Countdown extends Component {
 			</h3>
 
 			<p className="txt-center m2-txt1 p-b-67">
-				Elesarr first decentralized crowdfunding application launching on the 20th of March 2020 
+				Elesarr first decentralized crowdfunding application in Nigeria launching on the 20th of March 2020 
 			</p>
 
 			<div className="flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1">
@@ -77,84 +103,25 @@ export default class Countdown extends Component {
 				</div>
 			</div>
 
-			{/* <form className="flex-w flex-c-m contact100-form validate-form p-t-70">
+			<form
+					 className="flex-w flex-c-m contact100-form validate-form p-t-70"
+					 onSubmit={this.handleSubmit}
+					 >
 				<div className="wrap-input100 validate-input where1" data-validate = "Email is required: ex@abc.xyz">
                     <input 
                         className="s1-txt1 placeholder0 input100" 
-                        type="text" name="email" placeholder="Email Address" />
+                        type="text" name="email" placeholder="Email Address" 
+						ref ={(input) => {this.email = input}}
+						required
+						/>
 					<span className="focus-input100"></span>
 				</div>
-				<button className="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
+				<button type="submit"  className="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
 					Notify Me
 				</button>
-			</form>			 */}
+			</form>			
 		</div>
 	</div>
 		);
 	}
 }
-
-// const Countdown = () => {
-//     return(
-//         <div 
-//                 className="bg-img1 overlay1 size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15" 
-//                 style={{ backgroundImage: "url('images/bg01.jpg')" }}>
-// 		<div className="wsize1">
-// 			<p className="txt-center p-b-23">
-// 				<i className="zmdi zmdi-card-giftcard cl0 fs-60"></i>
-// 			</p>
-
-// 			<h3 className="l1-txt1 txt-center p-b-22">
-// 				Coming Soon
-// 			</h3>
-
-// 			<p className="txt-center m2-txt1 p-b-67">
-// 				Our website is under construction, follow us for update now!
-// 			</p>
-
-// 			<div className="flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1">
-// 				<div className="flex-col-c-m wsize2 m-b-20">
-// 					<span className="l1-txt2 p-b-4 days">30</span>
-// 					<span className="m2-txt2">Days</span>
-// 				</div>
-
-// 				<span className="l1-txt2 p-b-22">:</span>
-				
-// 				<div className="flex-col-c-m wsize2 m-b-20">
-// 					<span className="l1-txt2 p-b-4 hours">17</span>
-// 					<span className="m2-txt2">Hours</span>
-// 				</div>
-
-// 				<span className="l1-txt2 p-b-22 respon2">:</span>
-
-// 				<div className="flex-col-c-m wsize2 m-b-20">
-// 					<span className="l1-txt2 p-b-4 minutes">50</span>
-// 					<span className="m2-txt2">Minutes</span>
-// 				</div>
-
-// 				<span className="l1-txt2 p-b-22">:</span>
-
-// 				<div className="flex-col-c-m wsize2 m-b-20">
-// 					<span className="l1-txt2 p-b-4 seconds">39</span>
-// 					<span className="m2-txt2">Seconds</span>
-// 				</div>
-// 			</div>
-
-// 			<form className="flex-w flex-c-m contact100-form validate-form p-t-70">
-// 				<div className="wrap-input100 validate-input where1" data-validate = "Email is required: ex@abc.xyz">
-//                     <input 
-//                         className="s1-txt1 placeholder0 input100" 
-//                         type="text" name="email" placeholder="Email Address" />
-// 					<span className="focus-input100"></span>
-// 				</div>
-// 				<button className="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
-// 					Notify Me
-// 				</button>
-// 			</form>			
-// 		</div>
-// 	</div>
-//     );
-// }
-
-
-// export default Countdown;
