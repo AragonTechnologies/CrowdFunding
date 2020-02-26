@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
 import Countdown from "./components/countdown/Countdown"
 import Aux from "./hoc/aux.js"
+import ThankYou from './views/thank';
+
+import { Route,Switch, BrowserRouter as Router } from "react-router-dom"
 
 
 export default class App extends Component {
   render() {
     return (
       <Aux>
-        <Countdown />
+      
+<Router>
+        <Switch>
+              <Route path="/thanks">
+                <ThankYou />
+              </Route>
+              <Route exact path="/">
+              <Countdown />
+      </Route>
+
+              
+            </Switch>
+
+            </Router>
+
       </Aux>
     );
   }
