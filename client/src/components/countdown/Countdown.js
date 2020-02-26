@@ -3,12 +3,14 @@ import moment from "moment";
 
 import axios from 'axios';
 
+import { withRouter } from 'react-router-dom';
 
 
-export default class Countdown extends Component {
+
+class Countdown extends Component {
 	constructor(props) {
 		super(props);
-			this.handleSubmit = this.handleSubmit.bind(this);
+			// this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	
 	state = {
@@ -40,9 +42,11 @@ export default class Countdown extends Component {
         }
     }
 
-	 handleSubmit(event){
+	 handleSubmit = (event)=>{
 		event.preventDefault();
 		 const email = this.email.value
+
+		 console.log(email)
 		 
 		//  console.log(email)
 		// console.log("HELLO WORLD")
@@ -52,9 +56,16 @@ export default class Countdown extends Component {
 					console.log(err)
 				}
 				console.log(res.message)
+				this.props.history.push('/thanks')
 			} )
 			.catch(err => console.log(err))
+
+
 			event.stopPropagation();
+
+			
+
+
 	}
 	render() {
 		const { days, hours, minutes, seconds } = this.state;
@@ -125,3 +136,7 @@ export default class Countdown extends Component {
 		);
 	}
 }
+
+export default withRouter(Countdown);
+
+
