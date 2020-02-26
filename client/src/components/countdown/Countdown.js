@@ -56,11 +56,10 @@ class Countdown extends Component {
 					console.log(err)
 				}
 				console.log(res.message)
-				this.props.history.push('/thanks')
 			} )
 			.catch(err => console.log(err))
 
-
+			this.props.history.push('/thanks')
 			event.stopPropagation();
 
 			
