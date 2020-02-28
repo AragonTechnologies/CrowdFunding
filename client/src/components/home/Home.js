@@ -30,12 +30,12 @@ const Home = () => {
                     {/* <!-- Heading -->
                      */}
                     <h1 className="display-4 text-center text-md-left mb-3">
-                        It's time to amplify your <strong className="text-primary">online business</strong>
+                     
+                     RAISE FUNDS FOR THE SOCIAL CAUSES AND BUSINESSES YOU <strong className="text-custom">CARE ABOUT</strong>
                     </h1>
                     {/* <!-- Text --> */}
                     <p className="lead text-center text-md-left text-muted">
-                        Build a beautiful, modern website with flexible Bootstrap components built from scratch.
-                    </p>
+                    With our Decentralized and a Transparent system, you can start a campaign to fund your dream.                    </p>
                     {/* <!-- Buttons --> */}
                     <div className="text-center text-md-left mt-5">
                         <a href="#" className="btn btn-primary btn-icon">
@@ -56,12 +56,8 @@ const Home = () => {
             <div className="row mb-5 justify-content-center text-center">
                 <div className="col-lg-6">
                     <span className="badge badge-soft-success badge-pill badge-lg">
-                        Get started
+                    Featured Campaigns
                     </span>
-                    <h2 className=" mt-4">Carefuly crafted components ready to use in your project</h2>
-                    <div className="mt-2">
-                        <p className="lead lh-180">Use Atomic Design to build components, sections and, then, pages.</p>
-                    </div>
                 </div>
             </div>
             {/* <!-- Card --> */}
@@ -117,11 +113,10 @@ const Home = () => {
                 <div className="col-lg-6 order-lg-2 ml-lg-auto pl-lg-6">
                     {/* <!-- Heading -->
  */}
-                    <h5 className="h2 mt-4">We deliver the high quality end results you need</h5>
-                    {/* <!-- Text --> */}
-                    <p className="lead lh-190 my-4">
-                        With Quick you get components and examples, including tons of variables that will help you customize this theme with ease.
-                    </p>
+                    <h5 className="h2 mt-4">
+                    START AND RUN A SUCCESSFUL CROWDFUNDING CAMPAIGN FROM THE COMFORT OF
+YOUR ROOM.
+                    </h5>
                     {/* <!-- List --> */}
                     <ul className="list-unstyled">
                         <li className="py-2">
@@ -132,7 +127,9 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <span className="h6 mb-0">Perfect for modern startups</span>
+                                    <span className="h6 mb-0">
+                                    Sign up and invite some friends to gain ethers
+                                    </span>
                                 </div>
                             </div>
                         </li>
@@ -144,7 +141,9 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <span className="h6 mb-0">Built with customization and ease-of-use at its core</span>
+                                    <span className="h6 mb-0">
+                                    Create a campaign and share with your friends for support
+                                    </span>
                                 </div>
                             </div>
                         </li>
@@ -156,7 +155,9 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <span className="h6 mb-0">Quality design and thoughfully crafted code</span>
+                                    <span className="h6 mb-0">
+                                    Reach your Milestone and your needed funds get deposited into your bank.
+                                    </span>
                                 </div>
                             </div>
                         </li>
@@ -170,289 +171,6 @@ const Home = () => {
                             src="assets/img/svg/illustrations/illustration-2.svg" 
                             className="img-fluid"
                             />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section className="slice slice-lg bg-section-dark pt-5 pt-lg-8">
-        {/* <!-- SVG separator --> */}
-        <div className="shape-container shape-line shape-position-top shape-orientation-inverse">
-            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" 
-            // xmlns:xlink="http://www.w3.org/1999/xlink" 
-            // throwIfNamespace
-            {...namespaces}
-            preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" 
-            style={{enableBackground:"new 0 0 2560 100"}} 
-            // xml:space="preserve"
-            {...names2}
-            className="">
-                <polygon points="2560 0 2560 100 0 100"></polygon>
-            </svg>
-        </div>
-        {/* <!-- Container --> */}
-        <div className="container position-relative zindex-100">
-            <div className="col">
-                <div className="row justify-content-center">
-                    <div className="col-md-10 text-center">
-                        <div className="mt-4 mb-6">
-                            <h2 className="h1 text-white">
-                                Are you ready to grow faster?
-                            </h2>
-                            <h4 className="text-white mt-3">Create your own experience</h4>
-                            {/* <!-- Play button --> */}
-                            <a href="#" className="btn btn-warning btn-icon hover-translate-y-n10 mt-4">
-                                <span className="btn-inner--icon">
-                                    <i data-feather="play"></i>
-                                </span>
-                                <span className="btn-inner--text">Learn more</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section className="slice pt-0">
-        <div className="container position-relative zindex-100">
-            <div className="row">
-                <div className="col-xl-4 col-sm-6 mt-n7">
-                    <div className="card bg-soft-warning border-0 mb-5 hover-translate-y-n10">
-                        <div className="d-flex p-5">
-                            <div>
-                                <span className="badge badge-warning badge-pill">New</span>
-                            </div>
-                            <div className="pl-4">
-                                <h5 className="lh-130 text-dark">Listen to the nature</h5>
-                                <p className="text-dark opacity-6">
-                                    Design made simple with a clean and smart HTML markup.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="pb-5">
-                            <img 
-                                src="assets/img/svg/illustrations/illustration-7.svg" 
-                                className="img-fluid img-center" 
-                                style={{height: "200px"}} alt="Illustration" 
-                                />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-xl-4 col-sm-6 mt-sm-n7">
-                    <div className="card bg-soft-success border-0 mb-5 hover-translate-y-n10">
-                        <div className="d-flex p-5">
-                            <div>
-                                <span className="badge badge-success badge-pill">Tips</span>
-                            </div>
-                            <div className="pl-4">
-                                <h5 className="lh-130 text-dark">Rules not to follow</h5>
-                                <p className="text-dark opacity-6">
-                                    Design made simple with a clean and smart HTML markup.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="pb-5">
-                            <img 
-                                src="assets/img/svg/illustrations/illustration-6.svg" 
-                                className="img-fluid img-center" 
-                                style={{height: "200px"}} 
-                                alt="Illustration" />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-xl-4 col-md-12 col-sm-6 mt-xl-n7">
-                    <div className="card bg-soft-danger border-0 mb-5 hover-translate-y-n10">
-                        <div className="d-flex p-5 p">
-                            <div>
-                                <span className="badge badge-danger badge-pill">Update</span>
-                            </div>
-                            <div className="pl-3">
-                                <h5 className="lh-130 text-dark">Beware the water</h5>
-                                <p className="text-dark opacity-6">
-                                    Design made simple with a clean and smart HTML markup.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="pb-5">
-                            <img 
-                                src="assets/img/svg/illustrations/illustration-5.svg" 
-                                className="img-fluid img-center" 
-                                style={{height: "200px"}} alt="Illustration" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section className="slice slice-lg">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-6">
-                    <span className="badge badge-primary badge-pill">Key features</span>
-                    <h5 className="lh-180 mt-4 mb-6">Quick is a premium HTML template that includes adaptable components and pages for various industries, plus new ones each month.</h5>
-                </div>
-            </div>
-            {/* <!-- Features --> */}
-            <div className="row mx-lg-n4">
-                {/* <!-- Features - Col 1 --> */}
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div className="icon icon-shape rounded-circle bg-warning text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">100% Responsive</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div className="icon icon-shape rounded-circle bg-primary text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">Based on Bootstrap 4</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div className="icon icon-shape rounded-circle bg-danger text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">Built with SASS</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div className="icon icon-shape rounded-circle bg-success text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">300+ components</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div className="icon icon-shape rounded-circle bg-info text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">23+ widgets</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div className="icon icon-shape rounded-circle bg-warning text-white mr-4">
-                                    <i data-feather="check"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">Bootstrap Flexbox Grid</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* <!-- Features - Col 3 --> */}
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div>
-                                    <div className="icon icon-shape rounded-circle bg-info text-white mr-4">
-                                        <i data-feather="check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">Animate CSS</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div>
-                                    <div className="icon icon-shape rounded-circle bg-danger text-white mr-4">
-                                        <i data-feather="check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">Integrated plugins</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 px-lg-4">
-                    <div className="card shadow-none">
-                        <div className="p-3 d-flex">
-                            <div>
-                                <div>
-                                    <div className="icon icon-shape rounded-circle bg-primary text-white mr-4">
-                                        <i data-feather="check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="h6">Smart HTML markup</span>
-                                <p className="text-sm text-muted mb-0">
-                                    Built to be customized.
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -486,3 +204,284 @@ const Home = () => {
 }
 
 export default Home;
+
+// <section className="slice slice-lg bg-section-dark pt-5 pt-lg-8">
+// <div className="shape-container shape-line shape-position-top shape-orientation-inverse">
+//     <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" 
+//     {...namespaces}
+//     preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" 
+//     style={{enableBackground:"new 0 0 2560 100"}} 
+//     {...names2}
+//     className="">
+//         <polygon points="2560 0 2560 100 0 100"></polygon>
+//     </svg>
+// </div>
+// <div className="container position-relative zindex-100">
+//     <div className="col">
+//         <div className="row justify-content-center">
+//             <div className="col-md-10 text-center">
+//                 <div className="mt-4 mb-6">
+//                     <h2 className="h1 text-white">
+//                         Are you ready to grow faster?
+//                     </h2>
+//                     <h4 className="text-white mt-3">Create your own experience</h4>
+//                     {/* <!-- Play button --> */}
+//                     <a href="#" className="btn btn-warning btn-icon hover-translate-y-n10 mt-4">
+//                         <span className="btn-inner--icon">
+//                             <i data-feather="play"></i>
+//                         </span>
+//                         <span className="btn-inner--text">Learn more</span>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// </section>
+
+
+{/* <section className="slice pt-0">
+<div className="container position-relative zindex-100">
+    <div className="row">
+        <div className="col-xl-4 col-sm-6 mt-n7">
+            <div className="card bg-soft-warning border-0 mb-5 hover-translate-y-n10">
+                <div className="d-flex p-5">
+                    <div>
+                        <span className="badge badge-warning badge-pill">New</span>
+                    </div>
+                    <div className="pl-4">
+                        <h5 className="lh-130 text-dark">Listen to the nature</h5>
+                        <p className="text-dark opacity-6">
+                            Design made simple with a clean and smart HTML markup.
+                        </p>
+                    </div>
+                </div>
+                <div className="pb-5">
+                    <img 
+                        src="assets/img/svg/illustrations/illustration-7.svg" 
+                        className="img-fluid img-center" 
+                        style={{height: "200px"}} alt="Illustration" 
+                        />
+                </div>
+            </div>
+        </div>
+        <div className="col-xl-4 col-sm-6 mt-sm-n7">
+            <div className="card bg-soft-success border-0 mb-5 hover-translate-y-n10">
+                <div className="d-flex p-5">
+                    <div>
+                        <span className="badge badge-success badge-pill">Tips</span>
+                    </div>
+                    <div className="pl-4">
+                        <h5 className="lh-130 text-dark">Rules not to follow</h5>
+                        <p className="text-dark opacity-6">
+                            Design made simple with a clean and smart HTML markup.
+                        </p>
+                    </div>
+                </div>
+                <div className="pb-5">
+                    <img 
+                        src="assets/img/svg/illustrations/illustration-6.svg" 
+                        className="img-fluid img-center" 
+                        style={{height: "200px"}} 
+                        alt="Illustration" />
+                </div>
+            </div>
+        </div>
+        <div className="col-xl-4 col-md-12 col-sm-6 mt-xl-n7">
+            <div className="card bg-soft-danger border-0 mb-5 hover-translate-y-n10">
+                <div className="d-flex p-5 p">
+                    <div>
+                        <span className="badge badge-danger badge-pill">Update</span>
+                    </div>
+                    <div className="pl-3">
+                        <h5 className="lh-130 text-dark">Beware the water</h5>
+                        <p className="text-dark opacity-6">
+                            Design made simple with a clean and smart HTML markup.
+                        </p>
+                    </div>
+                </div>
+                <div className="pb-5">
+                    <img 
+                        src="assets/img/svg/illustrations/illustration-5.svg" 
+                        className="img-fluid img-center" 
+                        style={{height: "200px"}} alt="Illustration" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section className="slice slice-lg">
+<div className="container">
+    <div className="row">
+        <div className="col-lg-6">
+            <span className="badge badge-primary badge-pill">Key features</span>
+            <h5 className="lh-180 mt-4 mb-6">Quick is a premium HTML template that includes adaptable components and pages for various industries, plus new ones each month.</h5>
+        </div>
+    </div> */}
+    {/* <!-- Features --> */}
+    {/* <div className="row mx-lg-n4"> */}
+        {/* <!-- Features - Col 1 --> */}
+        {/* <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div className="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                            <i data-feather="check"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">100% Responsive</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div className="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                            <i data-feather="check"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">Based on Bootstrap 4</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div className="icon icon-shape rounded-circle bg-danger text-white mr-4">
+                            <i data-feather="check"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">Built with SASS</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div className="icon icon-shape rounded-circle bg-success text-white mr-4">
+                            <i data-feather="check"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">300+ components</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div className="icon icon-shape rounded-circle bg-info text-white mr-4">
+                            <i data-feather="check"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">23+ widgets</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4"> */}
+            {/* <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div className="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                            <i data-feather="check"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">Bootstrap Flexbox Grid</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> */}
+        {/* <!-- Features - Col 3 --> */}
+        {/* <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div>
+                            <div className="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">Animate CSS</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div>
+                            <div className="icon icon-shape rounded-circle bg-danger text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">Integrated plugins</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 px-lg-4">
+            <div className="card shadow-none">
+                <div className="p-3 d-flex">
+                    <div>
+                        <div>
+                            <div className="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span className="h6">Smart HTML markup</span>
+                        <p className="text-sm text-muted mb-0">
+                            Built to be customized.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section> */}

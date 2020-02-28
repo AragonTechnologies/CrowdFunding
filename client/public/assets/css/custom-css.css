@@ -7,5 +7,9 @@
 .btn-primary:hover{
     background-color: #6e3c91;
     border-color: aliceblue;
-    
+}
+
+
+.text-custom{
+ color: #8c54b3;   
 }
