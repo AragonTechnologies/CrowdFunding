@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import moment from "moment";
-
 import axios from 'axios';
-
 import { withRouter } from 'react-router-dom';
 import Aux from "../../hoc/aux"
 
@@ -24,16 +21,24 @@ class Countdown extends Component {
 	componentDidMount() {
         this.interval = setInterval(() => {
             const { timeTillDate, timeFormat } = this.props;
-              const then = moment('20/05/2020', 'DD/MM/YYYY');
-              console.log("THEN DATE", then)
-            const now = moment();
-            console.log("NOW Date", now)
-            const countdown = moment(then - now);
-            const days = countdown.format('D');
-            const hours = countdown.format('HH');
-            const minutes = countdown.format('mm');
-            const seconds = countdown.format('ss');
+            //   const then = moment('2020-04-20', 'YYYY-MM-DD');
+            const then =  new Date("Apr 20, 2020 16:37:52").getTime();
+            // const now = new Date();
+            const now = new Date().getTime();
 
+            // const countdown = moment(then - now);
+            var timeleft = then - now;
+
+            // console.log("COUNTDOWN", new Date(countdown))
+            // const days = countdown.format('DD');
+            // const hours = countdown.format('HH');
+            // const minutes = countdown.format('mm');
+            // const seconds = countdown.format('ss');
+
+            var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
             this.setState({ days, hours, minutes, seconds });
         }, 1000);
 	}
@@ -73,19 +78,10 @@ class Countdown extends Component {
 		return (
 			<Aux>
 				    <div className="container">
-      <svg className="logo" width="150" height="26" xmlns="http://www.w3.org/2000/svg">
-		<text 
-			transform="translate(-677 -86)" 
-			fill="none" 
-			fillRule="evenodd" 
-			fontFamily="LibreFranklin-Bold, Libre Franklin" fontSize="30" fontWeight="bold">
-          {/* <tspan x="675" y="111" fill="#15202A">ELESSAR</tspan>
-          <tspan x="800.312" y="111" fill="#8c54b3">.</tspan>
-           */}
+      <img
+      height="90px" 
 
-        </text>
-      </svg>
-      <img className="logo" src="img/Web2.png" style={{height:'15rem', marginLeft:'auto', marginRight:'auto'}}/>
+      className="logo" src="img/Web2.png" style={{objectFit:"cover", width:'10rem', marginLeft:'auto', marginRight:'auto'}}/>
 
       <h1 className="heading">We are launching <span>soon!</span></h1>
       <h3 className="sub-heading">Subscribe and get notified</h3>

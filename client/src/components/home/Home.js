@@ -182,11 +182,11 @@ YOUR ROOM.
                 <div className="col-lg-8">
                     {/* <!-- Title --> */}
                     <h2 className="h1 strong-600">
-                        Complete features at your hand
-                    </h2>
+                    ABOUT ELESSAR?                    </h2>
                     {/* <!-- Text --> */}
                     <p className="lead text-muted">
-                        Boomerang is a great free UI package based on Bootstrap 4 that includes the most important components and features so you can jumpstart the hard work and get right to the website creation fast and easy.
+                    Elessar is a crowdfunding platform built specifically to help you raise funds for your business or social
+course. It is the first decentralized Crowdfunding platform in Africa.
                     </p>
                     {/* <!-- Buttons --> */}
                     <div className="mt-5">

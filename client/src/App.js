@@ -9,25 +9,32 @@ import {
 
 import CookieModal from "./components/home/CookieModal"
 import Home from "./components/home/Home"
+import Count from "./components/countdown/Countdown2"
+import ThankYou from "./views/thank"
 export default class App extends Component {
   render() {
     return (
       <Router>
       <Aux>
-{/* 
-        <Preloader /> */}
-       <CookieModal />
-       <nav className="navbar navbar-expand-lg navbar-light bg-white">
+      <Switch>
+              <Route path="/thanks">
+                <ThankYou />
+              </Route>
+              <Route exact path="/">
+              <Count />
+      </Route>
+
+
+            </Switch>
+
+       {/* <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container">
-            {/* <!-- Brand --> */}
-            <Link className="navbar-brand" to="/">
-              Elesarr
+            <Link className="navbar-brand" to="/">             
+               <img src="Web2.png" style={{height:'8rem'}}/>
             </Link>
-            {/* <!-- Toggler --> */}
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-            {/* <!-- Collapse --> */}
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <ul className="navbar-nav mt-4 mt-lg-0 ml-auto">
                     <li className="nav-item ">
@@ -39,7 +46,6 @@ export default class App extends Component {
                         aria-haspopup="true" aria-expanded="false">Signup</Link>
                     </li>
                 </ul>
-                {/* <!-- Button --> */}
                 <Link 
                   className="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" 
                   to="/projects">
@@ -50,16 +56,15 @@ export default class App extends Component {
                   to="/create" target="_blank">
                     Start A Campaigne
                 </Link>
-                {/* <!-- Mobile button --> */}
                 <div className="d-lg-none text-center">
                     <a 
-                    href="https://webpixels.io/themes/quick-website-ui-kit" 
+                    href="#" 
                     className="btn btn-block btn-sm btn-warning">See more details</a>
                 </div>
             </div>
         </div>
-    </nav>
-    <Home />
+    </nav> */}
+    {/* <Home /> */}
       </Aux>
       </Router>
     );
