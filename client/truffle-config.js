@@ -30,7 +30,7 @@ module.exports = {
         enabled: true,
         runs: 200
       },
-      version:"^0.5.1",
+      version:"^0.6.1",
       evmVersion: "byzantium"
     }
   }

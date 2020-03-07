@@ -1,0 +1,174 @@
+{
+  "contractName": "Crowdfunding",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "count",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/goodness/Development/ethereum/Aragon/AragonCrowdFund/client/src/contracts/Crowdfunding.sol\":\"Crowdfunding\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/goodness/Development/ethereum/Aragon/AragonCrowdFund/client/src/contracts/Crowdfunding.sol\":{\"keccak256\":\"0x0d6cd19e1a7bf65e4bab0659fbd93e8d59fe9050440c418d353b8482a8528427\",\"urls\":[\"bzz-raw://9a2b409d7ba08085e9e01728160065758f4eaba873ea821b0df4b28ce463e776\",\"dweb:/ipfs/Qmdp64LV1TQfu6nwpTddpCVVV17chMumRym6UsAYFj7HQD\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060a18061001e6000396000f3fe6080604052348015600f57600080fd5b50600436106045576000357c01000000000000000000000000000000000000000000000000000000009004806306661abd14604a575b600080fd5b60506066565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a72315820fad739ba4c4829ff09d9f9da01a7acd3c549f361ee61234a6290f6b77720e1e164736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b50600436106045576000357c01000000000000000000000000000000000000000000000000000000009004806306661abd14604a575b600080fd5b60506066565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a72315820fad739ba4c4829ff09d9f9da01a7acd3c549f361ee61234a6290f6b77720e1e164736f6c63430005100032",
+  "sourceMap": "27:47:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:47:0;;;;;;;",
+  "deployedSourceMap": "27:47:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:47:0;;;;;;;;;;;;;;;;;;;;54:17;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n\n\ncontract Crowdfunding{\n    uint public count;\n}",
+  "sourcePath": "/home/goodness/Development/ethereum/Aragon/AragonCrowdFund/client/src/contracts/Crowdfunding.sol",
+  "ast": {
+    "absolutePath": "/home/goodness/Development/ethereum/Aragon/AragonCrowdFund/client/src/contracts/Crowdfunding.sol",
+    "exportedSymbols": {
+      "Crowdfunding": [
+        4
+      ]
+    },
+    "id": 5,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4,
+        "linearizedBaseContracts": [
+          4
+        ],
+        "name": "Crowdfunding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "count",
+            "nodeType": "VariableDeclaration",
+            "scope": 4,
+            "src": "54:17:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "54:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5,
+        "src": "27:47:0"
+      }
+    ],
+    "src": "0:74:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/goodness/Development/ethereum/Aragon/AragonCrowdFund/client/src/contracts/Crowdfunding.sol",
+    "exportedSymbols": {
+      "Crowdfunding": [
+        4
+      ]
+    },
+    "id": 5,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4,
+        "linearizedBaseContracts": [
+          4
+        ],
+        "name": "Crowdfunding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "count",
+            "nodeType": "VariableDeclaration",
+            "scope": 4,
+            "src": "54:17:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "54:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5,
+        "src": "27:47:0"
+      }
+    ],
+    "src": "0:74:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-07T10:17:39.309Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

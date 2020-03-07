@@ -82,7 +82,12 @@ class Countdown extends Component {
       height="90px" 
 
       className="logo" src="img/Web2.png" style={{objectFit:"cover", width:'10rem', marginLeft:'auto', marginRight:'auto'}}/>
-
+      <h1 className="heading">You are just One Step Away from Raising the Funds you 
+ <span> need!</span></h1>
+      <p className="sub-heading"><b>
+      800,060</b> People behind you.
+<b>254</b> in front of you, You came right on time!
+      </p>
       <h1 className="heading">We are launching <span>soon!</span></h1>
       <h3 className="sub-heading">Subscribe and get notified</h3>
 
@@ -102,7 +107,10 @@ class Countdown extends Component {
       </form>
 
       <div className="count-wrapper">
-        <p className="sub-heading">Elesarr first decentralized crowdfunding application in Nigeria launching on the 20th of March 2020</p>
+        <p className="sub-heading">
+        Elessar is a crowdfunding platform built specifically to help you raise funds for your business or social
+      course.
+      It is the first decentralized Crowdfunding platform in Africa. launching on the 21th of April 2020</p>
         <ul className="flex-container">
           <li className="flex-item">
             <div className="days">{days} <span>days</span></div>
@@ -122,9 +130,15 @@ class Countdown extends Component {
 
     <footer>
       <div className="social">
-        <a href="#"><i className="fab fa-facebook 3x"></i></a>
+        <a
+          href="https://www.facebook.com/100003719094788/posts/1839439092856709/?app=fbl" target="_blank"
+        ><i className="fab fa-facebook 3x"></i></a>
         <a href="#"><i className="fab fa-twitter x3"></i></a>
         <a href="#"><i className="fab fa-instagram x3"></i></a>
+        <a 
+          href="https://t.me/joinchat/HlCKLRilXKjshaMizmtYGQ" 
+          target="_blank"><i className="fab fa-telegram x3"></i></a>
+        
       </div>
       <small className="attribution">&copy; Copyright <a target="_blank" href="https://aragontech.co/" style={{textDecoration:"none"}}>AragonTech</a>. All rights reserved.</small>
     </footer>
