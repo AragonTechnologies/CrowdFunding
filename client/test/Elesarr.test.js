@@ -80,8 +80,8 @@ contract("#Elesarr Contract Tests Suites", ([dep, creator, user2, user3, user4])
             )
 
             await this.contract.createCampaign(
-                'asrsdqa',
                 "Fourth Campaign",
+                'sdkjndus',
                 "Fourth Campaign Description",
                 web3.utils.toWei('0.10','Ether'),
                 deadline,
@@ -112,24 +112,73 @@ contract("#Elesarr Contract Tests Suites", ([dep, creator, user2, user3, user4])
     
 
     describe('PHASE2', async() => {
-        it("PROJECT CONTRACT:- checks if the contribute function is working", async() =>{
+            it("PROJECT CONTRACT:- checks if the contribute function is working", async() =>{
 
-            var contribute_result = await this.contract.contribute("asrsdqa",{'from':user,'value':web3.utils.toWei('0.1','Ether')})
-            // console.log(contribute_result)
-            var project = await this.contract.get_single_project(1)
-            // console.log("Project:", project)
-            var current_state = await this.contract.state()
-            const contributionCount = await this.contract.contributionCount()
-            contribute_result = contribute_result.logs[0].args
-            assert.equal(project['4'].toString(), web3.utils.toWei('0.1','Ether'))
-            assert.equal(contributionCount.toString(), 1)
-            // assert.equal(current_state.toString(),1)  // state should still be at Fundraising Since the Goal hasn't been met
-            // should fails
-            await this.contract.contribute({'from':creator}).should.be.rejected
-            await this.contract.contribute({'from':creator, 'value':web3.utils.toWei('0','Ether')}).should.be.rejected
+                var contribute_result = await this.contract.contribute("asrsdqa",{
+                                                                        'from':user2,
+                                                                        'value':web3.utils.toWei('0.1','Ether')
+                                                                    })
+                // var contribute_two =     await this.contract.contribute("asrsdqa",{
+                //         'from':user3,
+                //         'value':web3.utils.toWei('0.1','Ether')
+                //     })
+
+                //   var contribute_three =    await this.contract.contribute("asrsdqa",{
+                //         'from':user4,
+                //         'value':web3.utils.toWei('0.1','Ether')
+                //     })
+                // console.log(contribute_result)
+                var project = await this.contract.getProject("asrsdqa")
+                // console.log("Project:", project)
+                // var current_state = await this.contract.state()
+                const contributionCount = await this.contract.contributionCount()
+                contribute_result = contribute_result.logs[0].args
+                assert.equal(project['3'].toString(), web3.utils.toWei('0.1','Ether'))
+                assert.equal(contributionCount.toString(), 1)
+                // assert.equal(current_state.toString(),1)  // state should still be at Fundraising Since the Goal hasn't been met
+                // should fails
+                await this.contract.contribute({'from':creator}).should.be.rejected
+                await this.contract.contribute({'from':creator, 'value':web3.utils.toWei('0','Ether')}).should.be.rejected
+            
+            
+            
+            
+
+
+                let oldcreatorBalance
+                var project = await this.contract.getProject("asrsdqa")
+        
+                oldcreatorBalance =await web3.eth.getBalance(project['3'])
+                oldcreatorBalance =new web3.utils.BN(oldcreatorBalance)
+                
+                // console.log("OLD  BALANCE", oldcreatorBalance.toString())
+        
+                // var contribute_result = await this.contract.contribute("asrsdqa",{'from':user2,'value':web3.utils.toWei('0.2','Ether')})
+                // // var current_state = await this.contract.state()
+
+                // var result = await this.contract.checkIfFundingCompleteOrExpired(1)
+                // assert.equal(current_state.toString(),2)  // state should still be at Successful Since the Goal has been met
+        
+        
+        
+        
+                //     // // check the creator recieve funds
+                    // let newcreatorBalance;
+                    // newcreatorBalance =await web3.eth.getBalance(project['3'])
+                    // newcreatorBalance =new web3.utils.BN(newcreatorBalance)
+            
+                //     // let price
+                    // price = web3.utils.toWei('0.4','Ether')
+                    // price = new web3.utils.BN(price)
+                    
+            
+                    // const expectedBalance = oldcreatorBalance.add(price)
+                    // assert.equal(newcreatorBalance.toString(), expectedBalance.toString())
+                
+        
+            
+            
+            })
+        
         })
-    
-    })
-    
-
 })

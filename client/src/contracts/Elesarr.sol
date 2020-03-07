@@ -175,11 +175,12 @@ contract Elesarr{
         @param completedAt : time the project funding was completed
     */
 
-    struct Contributor{
-        string project_id;
-        address payable contributor_address;
-        uint256 value;
-    }
+    // struct Contributor{
+    //     string project_id;
+    //     uint256 id;
+    //     address payable contributor_address;
+    //     uint256 value;
+    // }
 
 
     struct Project{
@@ -192,7 +193,7 @@ contract Elesarr{
         uint256 deadline;
         uint256 currentBalance;
         uint256 completedAt;
-        Contributor[] contributors;
+        // Contributor[] contributors;
     }
 
     /* START EVENTS */
@@ -208,15 +209,21 @@ contract Elesarr{
     );
 
 
-    event ContributedCreated(
-        string project_id,
-        address payable contributor_address,
+    // event ContributedCreated(
+    //     string project_id,
+    //     uint256 id,
+    //     address payable contributor_address,
+    //     uint256 value
+    // );
+
+    event Contributed(
+        string  project_name,
+        address contributor,
         uint256 value
     );
-
     event CreatorPaid(address recipient);
-    event FundReceived(address contributor, uint amount, uint currentTotal);
-    event ProjectCompletedAt(string name, uint currentBalance, uint completedAt);
+    event FundReceived(address contributor, uint256 amount, uint256 currentTotal);
+    event ProjectCompletedAt(string name, uint256 currentBalance, uint256 completedAt);
 
 
     /* END EVENTS */
@@ -278,8 +285,7 @@ contract Elesarr{
         uint256 ,
         uint256,
         uint256,
-        address,
-        Contributor[] memory
+        address
     ){
 
     Project memory project = projects[_id];
@@ -291,8 +297,7 @@ contract Elesarr{
         project.goal,
         project.deadline,
         project.completedAt,
-        project.creator,
-        project.contributors
+        project.creator
     );
     }
 
@@ -304,15 +309,21 @@ contract Elesarr{
 */
 
      /**  CONTRIBUTE FUNCTIONALITY
-        @param 
+         
       */
-     function contribute(string calldata _id) external payable{
-        contributionCount++;
-        Project memory _project = projects[_id];
-         require(msg.sender != _project.creator);
-         require(msg.value > 0);
-         projects[_id].contributors[msg.sender] = projects[_id].contributors[msg.sender].add(msg.value);
-        _project.currentBalance =  _project.currentBalance + msg.value;
+
+    function contribute(string memory _id) public payable{
+        contributionCount++;  // increase contribution count
+        Project memory _project = projects[_id]; // gets the project
+         require(msg.sender != _project.creator); // checks
+         require(msg.value > 0); // checks
+         contributions[msg.sender] = contributions[msg.sender].add(msg.value); // increasest
+         emit Contributed(
+             _project.project_name,
+             msg.sender,
+             msg.value
+         );
+        _project.currentBalance =  _project.currentBalance.add(msg.value);  // increases the currentBalance
 
         //  currentBalance = currentBalance.add(msg.value); //updates the totalbalance
         projects[_id] = _project; // updates the 
@@ -331,7 +342,7 @@ contract Elesarr{
           }
           _project.completedAt = now;
           emit ProjectCompletedAt(
-                _project.name,
+                _project.project_name,
                 _project.currentBalance,
                 _project.completedAt
          );
@@ -350,6 +361,8 @@ contract Elesarr{
             }
             return false;
         }
+
+
 
 
 }
