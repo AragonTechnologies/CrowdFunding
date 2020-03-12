@@ -90,6 +90,10 @@ class Countdown extends Component {
       </p>
       <h1 className="heading">We are launching <span>soon!</span></h1>
       <h3 className="sub-heading">Subscribe and get notified</h3>
+      <h3 className="sub-heading">
+      Join our community on <a href="https://t.me/joinchat/HlCKLRilXKjshaMizmtYGQ" target ="_blank">Telegram</a>
+      </h3>
+
 
       <form   id="form" onSubmit={this.handleSubmit}>
         <div className="flex-container">
@@ -110,7 +114,8 @@ class Countdown extends Component {
         <p className="sub-heading">
         Elessar is a crowdfunding platform built specifically to help you raise funds for your business or social
       course.
-      It is the first decentralized Crowdfunding platform in Africa. launching on the 21th of April 2020</p>
+      It is the first decentralized Crowdfunding platform in Africa. 
+      Launching Soon</p>
         <ul className="flex-container">
           <li className="flex-item">
             <div className="days">{days} <span>days</span></div>
