@@ -1,13 +1,14 @@
 pragma solidity ^0.6.1;
 
+import "./Ownable.sol";
 
-contract SimpleCoin{
+contract SimpleCoin is Ownable{
 
     mapping(address => uint256) public coinBalance;
     mapping(address => mapping(address => uint256)) public allowances;
     mapping(address => bool) public frozenAccount;
 
-    address public owner;
+    // address public owner;
 
     event Transfer(
         address indexed from,
@@ -19,10 +20,10 @@ contract SimpleCoin{
         bool frozen
     );
 
-    modifier onlyOwner{
-        if(msg.sender != owner) revert();
-        _;
-    }
+    // modifier onlyOwner{
+    //     if(msg.sender != owner) revert();
+    //     _;
+    // }
 
     constructor(uint256 _initialSupply) public{
         owner = msg.sender; // sets owner to the deployer

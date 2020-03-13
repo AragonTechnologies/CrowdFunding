@@ -1,9 +1,9 @@
 pragma solidity ^0.6.1;
 
 import "./SimpleCoin.sol";
-
-
-contract Crowdsale{
+import "./ReleasablesSimpleCoin.sol";
+import "./Ownable.sol";
+contract Crowdsale is Ownable{
     uint256 public startTime;
     uint256 public endTime;
     uint256 public weiTokenPrice;
@@ -13,14 +13,14 @@ contract Crowdsale{
     uint256 public investmentRefunded;
     bool public isFinalized;
     bool public isRefundingAllowed;
-    address public owner;
-    SimpleCoin public crowdSaleToken;
+    // address public owner;
+    ReleasablesSimpleCoin public crowdSaleToken;
 
 
 /** EVENTS */
     event LogInvestment(address indexed investor, uint256 value);
     event LogTokenAssignment(address indexed investor, uint256 newTokens);
-
+    event Refund(address investor, uint256 value);
 
 
     constructor(
@@ -39,19 +39,16 @@ contract Crowdsale{
         weiTokenPrice = _weiTokenPrice;
         weiInvestmentObjective = _etherInvestmentObjective * 1000000000000000000;
 
-        crowdSaleToken = new SimpleCoin(0);
+        crowdSaleToken = new ReleasablesSimpleCoin(0);
         isFinalized = false;
         isRefundingAllowed = false;
         owner = msg.sender;
     }
 
-    function invest(address _beneficiary) public payable{
-        // allows an investor to book corwdsale tokens
-    }
-    // function finalize() onlyOwner public{
-    //     // allows the crowdsale organizer, who is the contract owner 
-    //     // to release tokens to investors in case of successfull completion
+    // function invest(address _beneficiary) public payable{
+    //     // allows an investor to book corwdsale tokens
     // }
+
     function refund() public {
         // allows an investor to get 
         // a refund in case of unsuccessfull completion
@@ -81,5 +78,33 @@ contract Crowdsale{
 
     function calculateNumberOfTokens(uint256 _investment) internal returns(uint256){
         return _investment / weiTokenPrice;
+    }
+
+    function finalize() onlyOwner public{
+        // allows the crowdsale organizer, who is the contract owner 
+        // to release tokens to investors in case of successfull completion
+        if(isFinalized) revert();
+        bool isCrowdsaleComplete  = now > endTime;
+        bool investmentObjectiveMet = investmentReceived >= weiInvestmentObjective;
+
+        if(isCrowdsaleComplete){
+            if(investmentObjectiveMet)
+                crowdSaleToken.release();
+            else
+                isRefundingAllowed = true;
+            
+            isFinalized = true;
+        }
+    }
+
+    function refund() public{
+        if(!isRefundingAllowed) revert();
+        address investor = msg.sender;
+        uint256 investment = investmentAmountOf(investor);
+        if(investment == 0) revert();
+        investmentAmountOf(investor) = 0;
+        investmentRefunded += investment;
+        emit Refund(msg.sender, investment);
+        if(!investor.send(investment)) revert();
     }
 }
