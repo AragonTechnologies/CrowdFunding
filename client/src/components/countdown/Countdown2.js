@@ -141,7 +141,7 @@ class Countdown extends Component {
         <a href="#"><i className="fab fa-twitter x3"></i></a>
         <a href="#"><i className="fab fa-instagram x3"></i></a>
         <a 
-          href="https://t.me/joinchat/HlCKLRilXKjshaMizmtYGQ" 
+          href="https://t.me/joinchat/MgHjcBilXKj1W1p0qi9Z8A" 
           target="_blank"><i className="fab fa-telegram x3"></i></a>
         
       </div>
